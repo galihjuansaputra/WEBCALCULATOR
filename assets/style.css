@@ -48,7 +48,7 @@
  .operator,
  .negative,
  .equals {
-   background: orange;
+   background: lime;
  }
 
  .card {
@@ -61,6 +61,18 @@
  .button:hover {
    font-weight: bold;
    background: rgba(0, 0, 0, 0.5);
+ }
+
+ .operator:hover {
+   background: green;
+ }
+
+ .negative:hover {
+   background: green;
+ }
+
+ .equals:hover {
+   background: green;
  }
 
  @media screen and (max-width: 513px) {
