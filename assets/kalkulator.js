@@ -91,6 +91,7 @@ function handleOperator(operator) {
 
 
 function performCalculation() {
+
   if (calculator.firstNumber == null || calculator.operator == null) {
     alert('Anda belum menetapkan operator');
     return;
@@ -103,6 +104,18 @@ function performCalculation() {
     result = parseInt(calculator.firstNumber) - parseInt(calculator.displayNumber);
   }
  
-  calculator.displayNumber = result;
+
+   // objek yang akan dikirimkan sebagai argumen fungsi putHistory()
+const history = {
+    firstNumber: calculator.firstNumber,
+    secondNumber: calculator.displayNumber,
+    operator: calculator.operator,
+    result: result
+}
+
+putHistory(history);
+calculator.displayNumber = result;
+renderHistory();
+
 }
 
